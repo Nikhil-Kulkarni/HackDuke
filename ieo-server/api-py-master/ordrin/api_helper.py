@@ -2,13 +2,15 @@
 The main developer documentation for this API is located at 
 http://ordr.in/developers"""
 from hashlib import sha256
-import requests
 import json
-import re
 import urllib
+import os
+
+import requests
+
 import mutate
 import jsonschema
-import os
+
 
 _dir = os.path.dirname(__file__)
 
