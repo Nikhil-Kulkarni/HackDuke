@@ -1,6 +1,6 @@
 """This package is a python wrapper for the ordr.in API. The main developer
 documentation for this API is located at http://ordr.in/developers"""
-from api_helper import APIHelper, TEST
+from api_helper import APIHelper, PRODUCTION, TEST
 
 class APIs(object):
 

@@ -1,11 +1,11 @@
 import urllib2
 import json
-
+import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
-
+from cross_validation import cross_validation
 
 yummly_app_id = '69189240'
 yummply_api_key = '9e160e5cce7ff68eab06dc8b9b99de71'

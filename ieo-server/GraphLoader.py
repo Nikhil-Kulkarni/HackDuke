@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import numpy as np
+import pylab
 from ordrinTesterNew import get_restaurants
 
 #Add labels
@@ -19,6 +21,7 @@ with open(filename) as f:
         polyShape.append(i.split('\t'))
     #polyShape[0] =
     '''
+from matplotlib.pyplot import figure, show
 import numpy as npy
 from numpy.random import rand
 def priceGraph(address, city, zip, allergy, nutrition):
@@ -77,6 +80,6 @@ def priceGraph(address, city, zip, allergy, nutrition):
             loc='lower left',
             ncol=3,
             fontsize=8)
-        fig.savefig('/outputprice.jpg')
+        fig.savefig('outputprice.jpg')
 
 #data = priceGraph("715 Techwood Drive", "Atlanta", "30332", ["Gluten-Free"], ["Low Sodium"])

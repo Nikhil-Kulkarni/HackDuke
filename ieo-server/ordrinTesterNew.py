@@ -1,10 +1,9 @@
+import ordrin
 import urllib2
 import json
-
-import ordrin
+import allergySearcher
 from allergySearcher import calculate_match
 from nutritionMatcher import get_percent_of_nutrition_matches
-
 
 yummly_app_id = '69189240'
 yummply_api_key = '9e160e5cce7ff68eab06dc8b9b99de71'

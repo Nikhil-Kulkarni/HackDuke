@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import numpy as np
+import pylab
 from ordrinTesterNew import get_restaurants
 
 #Add labels
@@ -19,6 +21,7 @@ with open(filename) as f:
         polyShape.append(i.split('\t'))
     #polyShape[0] =
         '''
+from matplotlib.pyplot import figure, show
 import numpy as npy
 from numpy.random import rand
 def priceNut(address, city, zip, allergy, nutrition):
@@ -76,4 +79,4 @@ def priceNut(address, city, zip, allergy, nutrition):
             ncol=3,
             fontsize=8)   
         #fig.savefig('pscoll.eps')
-        fig.savefig('/outputprice.jpg')
+        fig.savefig('output.jpg')
