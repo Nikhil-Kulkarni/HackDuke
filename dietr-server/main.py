@@ -11,17 +11,22 @@ class DietrHandler(http.server.BaseHTTPRequestHandler):
 
         postvars = self.rfile.read(int(self.headers["Content-Length"]))
 
-        if path == "/login":
-            import login
-            out = login.handleLogin(postvars)
-        elif path == "/register":
-            import register
-            out = register.handleRegister(postvars)
-        else:
+        if path != "/login" and path != "/register" and path != "/retrieve":
             self.send_error(404)
             return
 
-        self.send_response(200);
+        self.send_response(200)
+
+        if path == "/login":
+            import login
+            out = login.handleLogin(postvars, self)
+        elif path == "/register":
+            import register
+            out = register.handleRegister(postvars)
+        elif path == "/retrieve":
+            import retrieve
+            out = retrieve.handleRetrieve(postvars, self)
+
         self.send_header("Content-type", out[0])
         self.end_headers()
 
